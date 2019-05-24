@@ -1,0 +1,13 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+  /* background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/img2.png) left top no-repeat; */
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/img3.png) left top;
+ 
+}
+
+#canvas {
+	background: rgba(0,0,0,0.75);
+
+}
