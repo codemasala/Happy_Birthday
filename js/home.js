@@ -293,7 +293,8 @@ function reveal() {
   }
 
   var ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", "../mp4/birthday.mp4");
+  // ifrm.setAttribute.src="../mp4/birthday.mp4";
+  ifrm.setAttribute("src", "https://www.youtube.com/watch?v=lzUoRu5GqRA controls=0&loop=1&autoplay=1");
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
@@ -317,7 +318,7 @@ window.requestAnimFrame = (function(){
 		};
 })();
 
-var canvas = document.getElementById("canvas"),
+var canvas2 = document.getElementById("canvas2"),
 		ctx = canvas.getContext("2d"),
     keyword = "HAPPY BIRTHDAY MUSKAAN",
 		imageData,
@@ -331,8 +332,8 @@ var canvas = document.getElementById("canvas"),
 var W = window.innerWidth,
 		H = window.innerHeight;
 
-canvas.width = W;
-canvas.height = H;
+canvas2.width = W;
+canvas2.height = H;
 
 document.addEventListener("mousemove", function(e) {
 	mouse.x = e.pageX;
@@ -365,7 +366,7 @@ var Particle = function() {
 	}
 };
 
-var particles = [];
+var particules = [];
 
 // Draw the text
 function drawText() {
@@ -396,8 +397,8 @@ function positionParticles() {
 
 			// If the color is black, draw pixels
 			if (color == 255) {
-				particles.push(new Particle());
-				particles[particles.length - 1].setPosition(i, j);
+				particules.push(new Particle());
+				particules[particules.length - 1].setPosition(i, j);
 			}
 		}
 	}
@@ -411,8 +412,8 @@ positionParticles();
 function update() {
 	clear();
 
-	for(i = 0; i < particles.length; i++) {
-		var p = particles[i];
+	for(i = 0; i < particules.length; i++) {
+		var p = particules[i];
 
 		if(mouse.x > p.x && mouse.x < p.x + p.w && mouse.y > p.y && mouse.y < p.y + p.h)
 			hovered = true;
