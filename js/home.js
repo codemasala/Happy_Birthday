@@ -281,6 +281,8 @@ window.onload = function () {
 
 function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
+  document.querySelector('#canvas').style.display = 'none';
+
 
   loop();
 
@@ -294,11 +296,14 @@ function reveal() {
 
   var ifrm = document.createElement("iframe");
   // ifrm.setAttribute.src="../mp4/birthday.mp4";
-  ifrm.setAttribute("src", "https://www.youtube.com/watch?v=lzUoRu5GqRA controls=0&loop=1&autoplay=1");
+  ifrm.setAttribute("src", "https://youtube.com/embed/lzFF9buikps?controls=0&loop=1&autoplay=1");
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
-  document.querySelector('#video').appendChild(ifrm);
+  document.querySelector('#video').appendChild(iframe);
+
+
+
 }
 
 
@@ -318,7 +323,7 @@ window.requestAnimFrame = (function(){
 		};
 })();
 
-var canvas2 = document.getElementById("canvas2"),
+var canvas = document.getElementById("canvas"),
 		ctx = canvas.getContext("2d"),
     keyword = "HAPPY BIRTHDAY MUSKAAN",
 		imageData,
@@ -332,8 +337,8 @@ var canvas2 = document.getElementById("canvas2"),
 var W = window.innerWidth,
 		H = window.innerHeight;
 
-canvas2.width = W;
-canvas2.height = H;
+canvas.width = W;
+canvas.height = H;
 
 document.addEventListener("mousemove", function(e) {
 	mouse.x = e.pageX;
@@ -409,7 +414,7 @@ positionParticles();
 
 
 // Update
-function update() {
+function updates() {
 	clear();
 
 	for(i = 0; i < particules.length; i++) {
@@ -462,5 +467,5 @@ function update() {
 
 (function animloop(){
 	requestAnimFrame(animloop);
-	update();
+	updates();
 })();
