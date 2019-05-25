@@ -300,7 +300,7 @@ function reveal() {
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
-  document.querySelector('#video').appendChild(iframe);
+  document.querySelector('#video').appendChild(ifrm);
 
 
 
